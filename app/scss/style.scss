@@ -1,0 +1,51 @@
+@use 'global';
+@use 'var';
+@use 'reset';
+
+.works {
+    background-color: #20cc2e;
+    color: #fff;
+    min-height: 100vh;
+    padding: 100px 0;
+    .section-title {
+        font-size: 42px;
+        line-height: 120%;
+        margin-bottom: 40px;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .works-item {
+        background-color: #15781d;
+        min-width: 300px;
+        padding: 20px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        transition: all 0.3s;
+        &__img {
+            width: 100%;
+            border-radius: 5px;
+            object-fit: cover;
+            margin-bottom: 20px;
+
+        }
+        &__title {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 120%;
+            margin-bottom: 10px;
+        }
+
+        &__descr {
+            font-size: 16px;
+            line-height: 120%;
+        }
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
